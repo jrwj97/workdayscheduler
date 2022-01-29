@@ -22,3 +22,20 @@ function timeColor() {
   })
 }
 
+// function to save current text when save button is hit
+saveBtn.on("click", function() {
+  var time = $(this).siblings(".hour").text
+  var appointment = $(this).siblings(".plan").text
+
+
+  localStorage.setItem(time, appointment)
+})
+
+function loadSchedule() {
+  $(".hour").each(function() {
+    var hour = $(this).text();
+    var plan = $(this).text();
+
+    
+  })
+}
